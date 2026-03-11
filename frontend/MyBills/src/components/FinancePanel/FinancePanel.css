@@ -1,0 +1,172 @@
+.finance-container{
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 120px;
+
+}
+
+.finance-card{
+
+  width: 750px;
+
+  background-color: #0c2038;
+  color: white;
+
+  border-radius: 10px;
+
+  padding: 25px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+}
+
+.finance-card h2{
+  margin-bottom: 20px;
+}
+
+/* salario */
+
+.salario-input{
+
+  margin-bottom: 20px;
+
+}
+
+.salario-input label{
+
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+.salario-input input{
+
+  width: 100%;
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  border: 1px solid #1f3a5a;
+
+  background-color: #021124;
+  color: white;
+
+}
+
+/* formulario contas */
+
+.add-conta{
+
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 25px;
+
+}
+
+.add-conta input{
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  border: 1px solid #1f3a5a;
+
+  background-color: #021124;
+  color: white;
+
+  flex: 1;
+
+}
+
+.add-conta button{
+
+  background-color: #3686c3;
+
+  border: none;
+
+  border-radius: 6px;
+
+  padding: 10px 15px;
+
+  color: white;
+
+  cursor: pointer;
+
+}
+
+.add-conta button:hover{
+  background-color: #2d6fa2;
+}
+
+/* tabela */
+
+.tabela-contas{
+  border-top: 1px solid #1f3a5a;
+}
+
+.tabela-header{
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+  padding: 10px 0;
+
+  font-weight: bold;
+  color: #9fb3c8;
+
+}
+
+.tabela-row{
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+  padding: 12px 0;
+
+  border-top: 1px solid #1f3a5a;
+
+}
+
+/* botão deletar */
+
+.delete-btn{
+
+  background-color: #e74c3c;
+
+  border: none;
+
+  border-radius: 5px;
+
+  padding: 6px 10px;
+
+  color: white;
+
+  cursor: pointer;
+
+}
+
+.delete-btn:hover{
+  background-color: #c0392b;
+}
+
+/* resumo */
+
+.finance-resumo{
+
+  margin-top: 25px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #1f3a5a;
+
+}
+
+.finance-resumo p{
+
+  margin: 8px 0;
+
+}
