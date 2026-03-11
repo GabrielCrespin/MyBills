@@ -45,27 +45,6 @@ This project was created as a portfolio application to practice full-stack devel
 
 ---
 
-## 📂 Project Structure
-
-```
-MyBills
-│
-├── frontend
-│   ├── components
-│   ├── pages
-│   └── services
-│
-├── backend
-│   ├── Controllers
-│   ├── Models
-│   ├── Services
-│   └── Data
-│
-└── database
-```
-
----
-
 ## ⚙️ How to Run the Project
 
 ### 1️⃣ Clone the repository
