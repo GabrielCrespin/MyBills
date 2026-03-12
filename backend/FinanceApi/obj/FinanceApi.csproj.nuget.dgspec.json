@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\OneDrive\\Documentos\\facu\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj": {}
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\Projects\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\OneDrive\\Documentos\\facu\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj": {
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\Projects\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\facu\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\Projects\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj",
         "projectName": "FinanceApi",
-        "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\facu\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj",
+        "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\Projects\\MyBills\\backend\\FinanceApi\\FinanceApi.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\facu\\MyBills\\backend\\FinanceApi\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\Projects\\MyBills\\backend\\FinanceApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,30 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [

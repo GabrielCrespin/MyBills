@@ -1,5 +1,6 @@
-import { useState } from "react";
 import "./FinancePanel.css";
+import { getBills, createBill, deleteBill } from "../../service/billService";
+import { useEffect, useState } from "react";
 
 function FinancePanel(){
 
@@ -8,35 +9,64 @@ function FinancePanel(){
   const [valor, setValor] = useState("");
   const [salario, setSalario] = useState("");
 
-  function adicionarConta(){
+  // carregar contas ao iniciar
+  useEffect(() => {
+    carregarContas();
+  }, []);
+
+  async function carregarContas(){
+    try{
+      const data = await getBills();
+      setContas(data);
+    }catch(error){
+      console.error("Erro ao carregar contas:", error);
+    }
+  }
+
+  async function adicionarConta(){
 
     if(!nome || !valor) return;
 
-    const novaConta = {
-      id: Date.now(),
-      nome: nome,
-      valor: Number(valor)
-    };
+    try{
 
-    setContas([...contas, novaConta]);
+      const novaConta = {
+        name: nome,
+        value: Number(valor)
+      };
 
-    setNome("");
-    setValor("");
+      const contaCriada = await createBill(novaConta);
+
+      setContas([...contas, contaCriada]);
+
+      setNome("");
+      setValor("");
+
+    }catch(error){
+      console.error("Erro ao adicionar conta:", error);
+    }
 
   }
 
-  function deletarConta(id){
+  async function deletarConta(id){
 
-    const novasContas = contas.filter(
-      (conta) => conta.id !== id
-    );
+    try{
 
-    setContas(novasContas);
+      await deleteBill(id);
+
+      const novasContas = contas.filter(
+        (conta) => conta.id !== id
+      );
+
+      setContas(novasContas);
+
+    }catch(error){
+      console.error("Erro ao deletar conta:", error);
+    }
 
   }
 
   const totalContas = contas.reduce(
-    (soma, conta) => soma + conta.valor,
+    (soma, conta) => soma + conta.value,
     0
   );
 
@@ -109,9 +139,9 @@ function FinancePanel(){
 
             <div key={conta.id} className="tabela-row">
 
-              <span>{conta.nome}</span>
+              <span>{conta.name}</span>
 
-              <span>R$ {conta.valor}</span>
+              <span>R$ {conta.value}</span>
 
               <button
                 className="delete-btn"
